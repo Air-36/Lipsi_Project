@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Apr  6 17:40:34 2025" VIVADOVERSION="2023.2">
+
+  <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:basys3:part0:1.2" DEVICE="7a35t" NAME="Lipsi" PACKAGE="cpg236" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="External_Ports_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="clk_div_100m_to_1Hz_0" PORT="clk_100M"/>
+        <CONNECTION INSTANCE="memory_0" PORT="clk100m"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="reset" SIGIS="undef" SIGNAME="External_Ports_reset">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="memory_0" PORT="reset"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/PC_0" HWVERSION="1.0" INSTANCE="PC_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="PC" VLNV="xilinx.com:module_ref:PC:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Lipsi_PC_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="PC_en" SIGIS="undef" SIGNAME="controller_0_PC_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="controller_0" PORT="PC_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="PC_out" RIGHT="0" SIGIS="undef" SIGNAME="PC_0_PC_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_0" PORT="rd_addr"/>
+            <CONNECTION INSTANCE="data_mux_0" PORT="PC"/>
+            <CONNECTION INSTANCE="counter_0" PORT="PC_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_div_100m_to_1Hz_0_clk_1Hz">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_div_100m_to_1Hz_0" PORT="clk_1Hz"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="mux_out" RIGHT="0" SIGIS="undef" SIGNAME="PC_mux_0_PC">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PC_mux_0" PORT="PC"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/PC_mux_0" HWVERSION="1.0" INSTANCE="PC_mux_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="PC_mux" VLNV="xilinx.com:module_ref:PC_mux:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Lipsi_PC_mux_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="PC" SIGIS="undef" SIGNAME="PC_mux_0_PC">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PC_0" PORT="mux_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="accumulator" RIGHT="0" SIGIS="undef" SIGNAME="accumulator_0_accu_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="accumulator_0" PORT="accu_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="adder" RIGHT="0" SIGIS="undef" SIGNAME="counter_0_PC_mux">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="counter_0" PORT="PC_mux"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="rd_data" RIGHT="0" SIGIS="undef" SIGNAME="memory_0_rd_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_0" PORT="rd_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="select" RIGHT="0" SIGIS="undef" SIGNAME="controller_0_PC_mux">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="controller_0" PORT="PC_mux"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/accumulator_0" HWVERSION="1.0" INSTANCE="accumulator_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="accumulator" VLNV="xilinx.com:module_ref:accumulator:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Lipsi_accumulator_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="accu_en" SIGIS="undef" SIGNAME="controller_0_A_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="controller_0" PORT="A_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="accu_out" RIGHT="0" SIGIS="undef" SIGNAME="accumulator_0_accu_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="data_mux_0" PORT="A"/>
+            <CONNECTION INSTANCE="PC_mux_0" PORT="accumulator"/>
+            <CONNECTION INSTANCE="controller_0" PORT="accumulator"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="alu_out" RIGHT="0" SIGIS="undef"/>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_div_100m_to_1Hz_0_clk_1Hz">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_div_100m_to_1Hz_0" PORT="clk_1Hz"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/addr_mux_0" HWVERSION="1.0" INSTANCE="addr_mux_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="addr_mux" VLNV="xilinx.com:module_ref:addr_mux:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Lipsi_addr_mux_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="7" NAME="mem_addr" RIGHT="0" SIGIS="undef" SIGNAME="addr_mux_0_mem_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_0" PORT="wr_addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="rd_data" RIGHT="0" SIGIS="undef" SIGNAME="memory_0_rd_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_0" PORT="rd_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="select" SIGIS="undef" SIGNAME="controller_0_addr_mux">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="controller_0" PORT="addr_mux"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/clk_div_100m_to_1Hz_0" HWVERSION="1.0" INSTANCE="clk_div_100m_to_1Hz_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clk_div_100m_to_1Hz" VLNV="xilinx.com:module_ref:clk_div_100m_to_1Hz:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Lipsi_clk_div_100m_to_1Hz_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk_100M" SIGIS="undef" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="clk_1Hz" SIGIS="undef" SIGNAME="clk_div_100m_to_1Hz_0_clk_1Hz">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PC_0" PORT="clk"/>
+            <CONNECTION INSTANCE="accumulator_0" PORT="clk"/>
+            <CONNECTION INSTANCE="controller_0" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/controller_0" HWVERSION="1.0" INSTANCE="controller_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="controller" VLNV="xilinx.com:module_ref:controller:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="A" VALUE="&quot;00&quot;"/>
+        <PARAMETER NAME="B" VALUE="&quot;01&quot;"/>
+        <PARAMETER NAME="C" VALUE="&quot;10&quot;"/>
+        <PARAMETER NAME="D" VALUE="&quot;11&quot;"/>
+        <PARAMETER NAME="Component_Name" VALUE="Lipsi_controller_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="A_en" SIGIS="undef" SIGNAME="controller_0_A_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="accumulator_0" PORT="accu_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="PC_en" SIGIS="undef" SIGNAME="controller_0_PC_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PC_0" PORT="PC_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="PC_mux" RIGHT="0" SIGIS="undef" SIGNAME="controller_0_PC_mux">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PC_mux_0" PORT="select"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="accumulator" RIGHT="0" SIGIS="undef" SIGNAME="accumulator_0_accu_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="accumulator_0" PORT="accu_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="addr_mux" SIGIS="undef" SIGNAME="controller_0_addr_mux">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="addr_mux_0" PORT="select"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="alu_select" RIGHT="0" SIGIS="undef"/>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="clk_div_100m_to_1Hz_0_clk_1Hz">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_div_100m_to_1Hz_0" PORT="clk_1Hz"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="data_mux" SIGIS="undef" SIGNAME="controller_0_data_mux">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="data_mux_0" PORT="select"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="instruction" RIGHT="0" SIGIS="undef" SIGNAME="memory_0_rd_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_0" PORT="rd_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="wr_en" SIGIS="undef" SIGNAME="controller_0_wr_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_0" PORT="wr_en"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/counter_0" HWVERSION="1.0" INSTANCE="counter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="counter" VLNV="xilinx.com:module_ref:counter:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Lipsi_counter_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="7" NAME="PC_mux" RIGHT="0" SIGIS="undef" SIGNAME="counter_0_PC_mux">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PC_mux_0" PORT="adder"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="PC_out" RIGHT="0" SIGIS="undef" SIGNAME="PC_0_PC_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PC_0" PORT="PC_out"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/data_mux_0" HWVERSION="1.0" INSTANCE="data_mux_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="data_mux" VLNV="xilinx.com:module_ref:data_mux:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Lipsi_data_mux_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="A" RIGHT="0" SIGIS="undef" SIGNAME="accumulator_0_accu_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="accumulator_0" PORT="accu_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="PC" RIGHT="0" SIGIS="undef" SIGNAME="PC_0_PC_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PC_0" PORT="PC_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="mem_data" RIGHT="0" SIGIS="undef" SIGNAME="data_mux_0_mem_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_0" PORT="wr_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="select" SIGIS="undef" SIGNAME="controller_0_data_mux">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="controller_0" PORT="data_mux"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/memory_0" HWVERSION="1.0" INSTANCE="memory_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="memory" VLNV="xilinx.com:module_ref:memory:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Lipsi_memory_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk100m" SIGIS="undef" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="rd_addr" RIGHT="0" SIGIS="undef" SIGNAME="PC_0_PC_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PC_0" PORT="PC_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="rd_data" RIGHT="0" SIGIS="undef" SIGNAME="memory_0_rd_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="addr_mux_0" PORT="rd_data"/>
+            <CONNECTION INSTANCE="PC_mux_0" PORT="rd_data"/>
+            <CONNECTION INSTANCE="controller_0" PORT="instruction"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="wr_addr" RIGHT="0" SIGIS="undef" SIGNAME="addr_mux_0_mem_addr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="addr_mux_0" PORT="mem_addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="wr_data" RIGHT="0" SIGIS="undef" SIGNAME="data_mux_0_mem_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="data_mux_0" PORT="mem_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="wr_en" SIGIS="undef" SIGNAME="controller_0_wr_en">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="controller_0" PORT="wr_en"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

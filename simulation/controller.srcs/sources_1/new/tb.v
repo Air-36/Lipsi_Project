@@ -1,0 +1,45 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 06.04.2025 18:42:06
+// Design Name: 
+// Module Name: tb
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module tb(
+
+    );
+    reg clk, reset;
+     wire [7:0]rd_data, rd_addr, wr_addr, wr_data, alu_out,  adder_out, PC_out, accu_out, v, w, x, y, z, ins_store;
+    wire [2:0]alu_select;
+    wire wr_en, PC_en, A_en, addr_mux, data_mux, addr_select, mem_select, ins_store_en;
+    wire [1:0] PC_mux, state, pin;
+    
+    lipsi_top2 dut (clk, reset,
+     rd_data, rd_addr, wr_addr, wr_data, alu_out,  adder_out, PC_out, accu_out, v, w, x, y, z, ins_store,
+    alu_select,
+    wr_en, PC_en, A_en, addr_mux, data_mux, addr_select, mem_select, ins_store_en,
+    PC_mux, state, pin);
+    
+    always #10 clk = ~clk;
+    initial begin
+       clk = 0;
+       reset = 1;
+       #23
+       reset = 1'b0;
+    end
+endmodule

@@ -1,0 +1,21 @@
+srcscan starts
+INFO: analyzing module ALU (VERI-9002)
+INFO: analyzing module PC (VERI-9002)
+INFO: analyzing module PC_mux (VERI-9002)
+INFO: analyzing module accumulator (VERI-9002)
+INFO: analyzing module addr_ctrl_reg (VERI-9002)
+INFO: analyzing module addr_mux (VERI-9002)
+INFO: analyzing module controller (VERI-9002)
+INFO: analyzing module counter (VERI-9002)
+INFO: analyzing module data_mux (VERI-9002)
+INFO: analyzing module lipsi_top2 (VERI-9002)
+C:/Users/shrin/Desktop/Vivado_projects/Lipsi_project/simulation/controller.srcs/sources_1/new/lipsi_top2.v(32): WARNING: syntax error near 'endmodule' (VERI-1137)
+C:/Users/shrin/Desktop/Vivado_projects/Lipsi_project/simulation/controller.srcs/sources_1/new/lipsi_top2.v(32): ERROR: Verilog 2000 keyword 'endmodule' used in incorrect context (VERI-2344)
+INFO: analyzing module memory (VERI-9002)
+INFO: analyzing module tb (VERI-9002)
+Listing tops:
+VeriTop library:xil_defaultlib mod:tb
+END of tops
+C:/Users/shrin/Desktop/Vivado_projects/Lipsi_project/simulation/controller.srcs/sources_1/new/tb.v(23): INFO: compiling module 'tb_default' (VERI-1018)
+C:/Users/shrin/Desktop/Vivado_projects/Lipsi_project/simulation/controller.srcs/sources_1/new/tb.v(32): WARNING: Module <lipsi_top2> not found while processing module instance <dut> (VERI-1063)
+srcscan exits with return value 0

@@ -1,0 +1,475 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xc7a35tcpg236-1",
+      "gen_directory": "../../../../controller.gen/sources_1/bd/Lipsi",
+      "name": "Lipsi",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.2"
+    },
+    "design_tree": {
+      "PC_0": "",
+      "PC_mux_0": "",
+      "accumulator_0": "",
+      "addr_mux_0": "",
+      "counter_0": "",
+      "data_mux_0": "",
+      "memory_0": "",
+      "controller_0": "",
+      "seven_seg_display_0": "",
+      "clk_div_100m_to_1Hz_0": ""
+    },
+    "ports": {
+      "clk": {
+        "direction": "I"
+      },
+      "reset": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "PC_0": {
+        "vlnv": "xilinx.com:module_ref:PC:1.0",
+        "ip_revision": "1",
+        "xci_name": "Lipsi_PC_0_0",
+        "xci_path": "ip\\Lipsi_PC_0_0\\Lipsi_PC_0_0.xci",
+        "inst_hier_path": "PC_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "PC",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "PC_en": {
+            "direction": "I"
+          },
+          "mux_out": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "PC_out": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "PC_mux_0": {
+        "vlnv": "xilinx.com:module_ref:PC_mux:1.0",
+        "ip_revision": "1",
+        "xci_name": "Lipsi_PC_mux_0_0",
+        "xci_path": "ip\\Lipsi_PC_mux_0_0\\Lipsi_PC_mux_0_0.xci",
+        "inst_hier_path": "PC_mux_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "PC_mux",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "rd_data": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "accumulator": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "adder": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "select": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "PC": {
+            "direction": "O"
+          }
+        }
+      },
+      "accumulator_0": {
+        "vlnv": "xilinx.com:module_ref:accumulator:1.0",
+        "ip_revision": "1",
+        "xci_name": "Lipsi_accumulator_0_0",
+        "xci_path": "ip\\Lipsi_accumulator_0_0\\Lipsi_accumulator_0_0.xci",
+        "inst_hier_path": "accumulator_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "accumulator",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "alu_out": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "accu_en": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "accu_out": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "addr_mux_0": {
+        "vlnv": "xilinx.com:module_ref:addr_mux:1.0",
+        "ip_revision": "1",
+        "xci_name": "Lipsi_addr_mux_0_0",
+        "xci_path": "ip\\Lipsi_addr_mux_0_0\\Lipsi_addr_mux_0_0.xci",
+        "inst_hier_path": "addr_mux_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "addr_mux",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "rd_data": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "select": {
+            "direction": "I"
+          },
+          "mem_addr": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "counter_0": {
+        "vlnv": "xilinx.com:module_ref:counter:1.0",
+        "ip_revision": "1",
+        "xci_name": "Lipsi_counter_0_0",
+        "xci_path": "ip\\Lipsi_counter_0_0\\Lipsi_counter_0_0.xci",
+        "inst_hier_path": "counter_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "counter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "PC_out": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "PC_mux": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "data_mux_0": {
+        "vlnv": "xilinx.com:module_ref:data_mux:1.0",
+        "ip_revision": "1",
+        "xci_name": "Lipsi_data_mux_0_0",
+        "xci_path": "ip\\Lipsi_data_mux_0_0\\Lipsi_data_mux_0_0.xci",
+        "inst_hier_path": "data_mux_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "data_mux",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "A": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "PC": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "select": {
+            "direction": "I"
+          },
+          "mem_data": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "memory_0": {
+        "vlnv": "xilinx.com:module_ref:memory:1.0",
+        "ip_revision": "1",
+        "xci_name": "Lipsi_memory_0_0",
+        "xci_path": "ip\\Lipsi_memory_0_0\\Lipsi_memory_0_0.xci",
+        "inst_hier_path": "memory_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "memory",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk100m": {
+            "direction": "I"
+          },
+          "wr_en": {
+            "direction": "I"
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "rd_addr": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "wr_addr": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "wr_data": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "rd_data": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "controller_0": {
+        "vlnv": "xilinx.com:module_ref:controller:1.0",
+        "ip_revision": "1",
+        "xci_name": "Lipsi_controller_0_1",
+        "xci_path": "ip\\Lipsi_controller_0_1\\Lipsi_controller_0_1.xci",
+        "inst_hier_path": "controller_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "controller",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "instruction": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "accumulator": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "alu_select": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "wr_en": {
+            "direction": "O"
+          },
+          "PC_en": {
+            "direction": "O"
+          },
+          "A_en": {
+            "direction": "O"
+          },
+          "addr_mux": {
+            "direction": "O"
+          },
+          "data_mux": {
+            "direction": "O"
+          },
+          "PC_mux": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          }
+        }
+      },
+      "seven_seg_display_0": {
+        "vlnv": "xilinx.com:module_ref:seven_seg_display:1.0",
+        "ip_revision": "1",
+        "xci_name": "Lipsi_seven_seg_display_0_0",
+        "xci_path": "ip\\Lipsi_seven_seg_display_0_0\\Lipsi_seven_seg_display_0_0.xci",
+        "inst_hier_path": "seven_seg_display_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "seven_seg_display",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk100M": {
+            "direction": "I"
+          },
+          "seg": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
+          },
+          "q": {
+            "direction": "I",
+            "left": "8",
+            "right": "0"
+          },
+          "an": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "clk_div_100m_to_1Hz_0": {
+        "vlnv": "xilinx.com:module_ref:clk_div_100m_to_1Hz:1.0",
+        "ip_revision": "1",
+        "xci_name": "Lipsi_clk_div_100m_to_1Hz_0_0",
+        "xci_path": "ip\\Lipsi_clk_div_100m_to_1Hz_0_0\\Lipsi_clk_div_100m_to_1Hz_0_0.xci",
+        "inst_hier_path": "clk_div_100m_to_1Hz_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "clk_div_100m_to_1Hz",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_100M": {
+            "direction": "I"
+          },
+          "clk_1Hz": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Net": {
+        "ports": [
+          "clk",
+          "clk_div_100m_to_1Hz_0/clk_100M",
+          "seven_seg_display_0/clk100M",
+          "memory_0/clk100m"
+        ]
+      },
+      "PC_0_PC_out": {
+        "ports": [
+          "PC_0/PC_out",
+          "memory_0/rd_addr",
+          "data_mux_0/PC",
+          "counter_0/PC_out"
+        ]
+      },
+      "PC_mux_0_PC": {
+        "ports": [
+          "PC_mux_0/PC",
+          "PC_0/mux_out"
+        ]
+      },
+      "accumulator_0_accu_out": {
+        "ports": [
+          "accumulator_0/accu_out",
+          "seven_seg_display_0/q",
+          "data_mux_0/A",
+          "controller_0/accumulator",
+          "PC_mux_0/accumulator"
+        ]
+      },
+      "addr_mux_0_mem_addr": {
+        "ports": [
+          "addr_mux_0/mem_addr",
+          "memory_0/wr_addr"
+        ]
+      },
+      "clk_div_100m_to_1Hz_0_clk_1Hz": {
+        "ports": [
+          "clk_div_100m_to_1Hz_0/clk_1Hz",
+          "PC_0/clk",
+          "controller_0/clk",
+          "accumulator_0/clk"
+        ]
+      },
+      "controller_0_A_en": {
+        "ports": [
+          "controller_0/A_en",
+          "accumulator_0/accu_en"
+        ]
+      },
+      "controller_0_PC_en": {
+        "ports": [
+          "controller_0/PC_en",
+          "PC_0/PC_en"
+        ]
+      },
+      "controller_0_PC_mux": {
+        "ports": [
+          "controller_0/PC_mux",
+          "PC_mux_0/select"
+        ]
+      },
+      "controller_0_addr_mux": {
+        "ports": [
+          "controller_0/addr_mux",
+          "addr_mux_0/select"
+        ]
+      },
+      "controller_0_data_mux": {
+        "ports": [
+          "controller_0/data_mux",
+          "data_mux_0/select"
+        ]
+      },
+      "controller_0_wr_en": {
+        "ports": [
+          "controller_0/wr_en",
+          "memory_0/wr_en"
+        ]
+      },
+      "counter_0_PC_mux": {
+        "ports": [
+          "counter_0/PC_mux",
+          "PC_mux_0/adder"
+        ]
+      },
+      "data_mux_0_mem_data": {
+        "ports": [
+          "data_mux_0/mem_data",
+          "memory_0/wr_data"
+        ]
+      },
+      "memory_0_rd_data": {
+        "ports": [
+          "memory_0/rd_data",
+          "addr_mux_0/rd_data",
+          "PC_mux_0/rd_data",
+          "controller_0/instruction"
+        ]
+      },
+      "reset_1": {
+        "ports": [
+          "reset",
+          "memory_0/reset"
+        ]
+      }
+    }
+  }
+}

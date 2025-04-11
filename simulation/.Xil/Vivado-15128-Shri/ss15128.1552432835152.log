@@ -1,0 +1,14 @@
+srcscan starts
+srcscan exits with return value 0
+02)
+INFO: analyzing module PC (VERI-9002)
+INFO: analyzing module PC_mux (VERI-9002)
+INFO: analyzing module accumulator (VERI-9002)
+INFO: analyzing module addr_mux (VERI-9002)
+INFO: analyzing module controller (VERI-9002)
+INFO: analyzing module counter (VERI-9002)
+INFO: analyzing module data_mux (VERI-9002)
+INFO: analyzing module lipsi_top2 (VERI-9002)
+INFO: analyzing module memory (VERI-90srcscan exits with return value 0
+I-9002)
+srcscan exits with return value 0
