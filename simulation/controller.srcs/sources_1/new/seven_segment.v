@@ -3,7 +3,7 @@ module seven_segment(
     output reg [6:0] seg, // Active-low 7-segment output
     output reg [3:0] an
 );
-wire clk1k, clk2Hz;
+wire clk1k, clk20Hz;
   wire [7:0] accu_out, w;
   reg [3:0] digit;  // 4-bit input (hex digit)
   reg [1:0] count;
@@ -14,7 +14,7 @@ wire clk1k, clk2Hz;
      end 
 
    clk_div_by_100K k(.clk(clk),.clk_1k(clk1k));
-   clk_div_by_50M h(.clk_100M(clk),.clk_2Hz(clk2Hz));
+   clk_div_by_50M h(.clk_100M(clk),.clk_20Hz(clk20Hz));
    lipsi_top2 l(.clk(clk2Hz), .reset(reset), .accu_out(accu_out), .w(w));
    
    

@@ -3,8 +3,8 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Sat Apr 12 14:45:44 2025
-# Process ID: 10508
+# Start of session at: Sat Apr 12 17:53:02 2025
+# Process ID: 14072
 # Current directory: C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.runs/synth_1
 # Command line: vivado.exe -log seven_segment.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source seven_segment.tcl
 # Log file: C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.runs/synth_1/seven_segment.vds
@@ -12,7 +12,7 @@
 # Running On: Shri, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 4, Host memory: 12622 MB
 #-----------------------------------------------------------
 source seven_segment.tcl -notrace
-create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 496.680 ; gain = 218.406
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 496.637 ; gain = 219.137
 Command: read_checkpoint -auto_incremental -incremental C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/utils_1/imports/synth_1/seven_seg_display.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/utils_1/imports/synth_1/seven_seg_display.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -26,10 +26,11 @@ INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
 WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {17-179}  -suppress '. The existing rule will be replaced.
-INFO: [Synth 8-7075] Helper process launched with PID 11008
+INFO: [Synth 8-7075] Helper process launched with PID 14916
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1327.820 ; gain = 439.828
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1328.684 ; gain = 440.930
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'clk2Hz', assumed default net type 'wire' [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/seven_segment.v:18]
 INFO: [Synth 8-6157] synthesizing module 'seven_segment' [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/seven_segment.v:1]
 INFO: [Synth 8-6157] synthesizing module 'clk_div_by_100K' [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/clk_div_by_100K.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'clk_div_by_100K' (0#1) [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/clk_div_by_100K.v:1]
@@ -98,21 +99,123 @@ WARNING: [Synth 8-7071] port 'pin' of module 'lipsi_top2' is unconnected for ins
 WARNING: [Synth 8-7023] instance 'l' of module 'lipsi_top2' has 28 connections declared, but only 4 given [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/seven_segment.v:18]
 INFO: [Synth 8-226] default block is never used [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/seven_segment.v:22]
 INFO: [Synth 8-6155] done synthesizing module 'seven_segment' (0#1) [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/seven_segment.v:1]
+WARNING: [Synth 8-7137] Register data_mem_reg[511] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[510] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[509] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[508] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[507] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[506] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[505] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[504] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[503] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[502] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[501] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[500] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[499] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[498] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[497] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[496] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[495] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[494] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[493] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[492] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[491] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[490] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[489] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[488] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[487] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[486] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[485] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[484] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[483] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[482] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[481] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[480] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[479] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[478] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[477] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[476] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[475] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[474] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[473] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[472] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[471] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[470] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[469] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[468] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[467] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[466] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[465] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[464] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[463] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[462] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[461] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[460] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[459] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[458] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[457] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[456] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[455] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[454] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[453] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[452] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[451] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[450] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[449] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[448] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[447] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[446] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[445] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[444] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[443] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[442] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[441] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[440] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[439] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[438] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[437] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[436] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[435] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[434] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[433] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[432] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[431] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[430] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[429] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[428] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[427] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[426] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[425] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[424] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[423] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[422] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[421] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[420] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[419] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[418] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[417] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[416] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[415] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[414] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[413] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+WARNING: [Synth 8-7137] Register data_mem_reg[412] in module memory has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/reg_file.v:15]
+INFO: [Common 17-14] Message 'Synth 8-7137' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3848] Net clk2Hz in module/entity seven_segment does not have driver. [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/seven_segment.v:18]
 WARNING: [Synth 8-7129] Port reset in module data_mux is either unconnected or has no load
 WARNING: [Synth 8-7129] Port reset in module addr_mux is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1557.539 ; gain = 669.547
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1559.070 ; gain = 671.316
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1557.539 ; gain = 669.547
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1559.070 ; gain = 671.316
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1557.539 ; gain = 669.547
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1559.070 ; gain = 671.316
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 1557.539 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 1559.070 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -123,28 +226,28 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/seven_segment_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1610.898 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1650.703 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1610.898 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1650.703 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1610.898 ; gain = 722.906
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1650.703 ; gain = 762.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1610.898 ; gain = 722.906
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1650.703 ; gain = 762.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1610.898 ; gain = 722.906
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1650.703 ; gain = 762.949
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'count_reg' in module 'seven_segment'
 WARNING: [Synth 8-327] inferring latch for variable 'alu_select_reg' [C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.srcs/sources_1/new/controller.v:76]
@@ -171,14 +274,14 @@ WARNING: [Synth 8-327] inferring latch for variable 'c_reg' [C:/Users/shrin/Desk
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'count_reg' using encoding 'sequential' in module 'seven_segment'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1610.898 ; gain = 722.906
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1650.703 ; gain = 762.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   26 Bit       Adders := 1     
+	   2 Input   24 Bit       Adders := 1     
 	   2 Input   20 Bit       Adders := 1     
 	   2 Input    9 Bit       Adders := 2     
 	   3 Input    9 Bit       Adders := 1     
@@ -187,9 +290,9 @@ Detailed RTL Component Info :
 +---XORs : 
 	   2 Input      8 Bit         XORs := 1     
 +---Registers : 
-	               26 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
 	               20 Bit    Registers := 1     
-	                8 Bit    Registers := 273   
+	                8 Bit    Registers := 280   
 	                4 Bit    Registers := 2     
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
@@ -222,28 +325,44 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3332] Sequential element (l/ctrl_unit/alu_select_reg[2]) is unused and will be removed from module seven_segment.
+WARNING: [Synth 8-3332] Sequential element (l/ctrl_unit/alu_select_reg[1]) is unused and will be removed from module seven_segment.
+WARNING: [Synth 8-3332] Sequential element (l/ctrl_unit/alu_select_reg[0]) is unused and will be removed from module seven_segment.
+WARNING: [Synth 8-3332] Sequential element (l/ctrl_unit/wr_en_reg) is unused and will be removed from module seven_segment.
+WARNING: [Synth 8-3332] Sequential element (l/ctrl_unit/PC_en_reg) is unused and will be removed from module seven_segment.
+WARNING: [Synth 8-3332] Sequential element (l/ctrl_unit/A_en_reg) is unused and will be removed from module seven_segment.
+WARNING: [Synth 8-3332] Sequential element (l/ctrl_unit/ins_store_en_reg) is unused and will be removed from module seven_segment.
+WARNING: [Synth 8-3332] Sequential element (l/ctrl_unit/addr_mux_reg) is unused and will be removed from module seven_segment.
+WARNING: [Synth 8-3332] Sequential element (l/ctrl_unit/data_mux_reg) is unused and will be removed from module seven_segment.
+WARNING: [Synth 8-3332] Sequential element (l/ctrl_unit/PC_mux_reg[1]) is unused and will be removed from module seven_segment.
+WARNING: [Synth 8-3332] Sequential element (l/ctrl_unit/PC_mux_reg[0]) is unused and will be removed from module seven_segment.
+WARNING: [Synth 8-3332] Sequential element (l/ctrl_unit/ns_reg[1]) is unused and will be removed from module seven_segment.
+WARNING: [Synth 8-3332] Sequential element (l/ctrl_unit/ns_reg[0]) is unused and will be removed from module seven_segment.
 WARNING: [Synth 8-3332] Sequential element (l/ctrl_unit/pin_reg[1]) is unused and will be removed from module seven_segment.
 WARNING: [Synth 8-3332] Sequential element (l/ctrl_unit/pin_reg[0]) is unused and will be removed from module seven_segment.
+WARNING: [Synth 8-3332] Sequential element (l/ctrl_unit/addr_select_reg) is unused and will be removed from module seven_segment.
+WARNING: [Synth 8-3332] Sequential element (l/ctrl_unit/mem_select_reg) is unused and will be removed from module seven_segment.
+WARNING: [Synth 8-3332] Sequential element (l/alu/c_reg) is unused and will be removed from module seven_segment.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1610.898 ; gain = 722.906
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1650.703 ; gain = 762.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1610.898 ; gain = 722.906
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1650.703 ; gain = 762.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1610.898 ; gain = 722.906
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1650.703 ; gain = 762.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1610.898 ; gain = 722.906
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1650.703 ; gain = 762.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -261,37 +380,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1610.898 ; gain = 722.906
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1650.703 ; gain = 762.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1610.898 ; gain = 722.906
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1650.703 ; gain = 762.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1610.898 ; gain = 722.906
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1650.703 ; gain = 762.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1610.898 ; gain = 722.906
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1650.703 ; gain = 762.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1610.898 ; gain = 722.906
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1650.703 ; gain = 762.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1610.898 ; gain = 722.906
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1650.703 ; gain = 762.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -307,51 +426,38 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |BUFG   |     2|
-|2     |CARRY4 |    21|
-|3     |LUT1   |     4|
-|4     |LUT2   |    44|
-|5     |LUT3   |    41|
-|6     |LUT4   |    18|
-|7     |LUT5   |   412|
-|8     |LUT6   |   745|
-|9     |MUXF7  |    48|
-|10    |MUXF8  |    24|
-|11    |FDCE   |  2064|
-|12    |FDPE   |     8|
-|13    |FDRE   |    67|
-|14    |LD     |     1|
-|15    |LDC    |     8|
-|16    |LDP    |     7|
-|17    |IBUF   |     2|
-|18    |OBUF   |    11|
+|1     |BUFG   |     1|
+|2     |CARRY4 |     5|
+|3     |LUT1   |     2|
+|4     |LUT2   |     5|
+|5     |LUT5   |     1|
+|6     |LUT6   |     4|
+|7     |FDRE   |    27|
+|8     |IBUF   |     1|
+|9     |OBUF   |    11|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1610.898 ; gain = 722.906
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1650.703 ; gain = 762.949
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 16 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:37 . Memory (MB): peak = 1610.898 ; gain = 669.547
-Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1610.898 ; gain = 722.906
+Synthesis finished with 0 errors, 0 critical warnings and 32 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:31 . Memory (MB): peak = 1650.703 ; gain = 671.316
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1650.703 ; gain = 762.949
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1610.898 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 109 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1650.703 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-WARNING: [Netlist 29-101] Netlist 'seven_segment' is not ideal for floorplanning, since the cellview 'memory' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1610.898 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1650.703 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 16 instances were transformed.
-  LD => LDCE: 1 instance 
-  LDC => LDCE: 8 instances
-  LDP => LDPE: 7 instances
+No Unisim elements were transformed.
 
-Synth Design complete | Checksum: fcc46522
+Synth Design complete | Checksum: 80108e19
 INFO: [Common 17-83] Releasing license: Synthesis
-60 Infos, 51 Warnings, 0 Critical Warnings and 0 Errors encountered.
+62 Infos, 167 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 1610.898 ; gain = 1111.242
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1610.898 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1650.703 ; gain = 1151.066
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1650.703 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.runs/synth_1/seven_segment.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file seven_segment_utilization_synth.rpt -pb seven_segment_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Apr 12 14:46:39 2025...
+INFO: [Common 17-206] Exiting Vivado at Sat Apr 12 17:53:52 2025...
