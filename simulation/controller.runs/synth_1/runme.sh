@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/shrin/Desktop/Vivado_projects/Lipsi_project/simulation/controller.runs/synth_1'
+HD_PWD='C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/simulation/controller.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

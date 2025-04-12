@@ -3,12 +3,12 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Thu Apr  3 15:04:09 2025
-# Process ID: 17684
-# Current directory: C:/Users/shrin/Desktop/Vivado_projects/Lipsi_project/memory/memory.runs/synth_1
+# Start of session at: Fri Apr 11 21:02:06 2025
+# Process ID: 17036
+# Current directory: C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/memory/memory.runs/synth_1
 # Command line: vivado.exe -log memory.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source memory.tcl
-# Log file: C:/Users/shrin/Desktop/Vivado_projects/Lipsi_project/memory/memory.runs/synth_1/memory.vds
-# Journal file: C:/Users/shrin/Desktop/Vivado_projects/Lipsi_project/memory/memory.runs/synth_1\vivado.jou
+# Log file: C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/memory/memory.runs/synth_1/memory.vds
+# Journal file: C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/memory/memory.runs/synth_1\vivado.jou
 # Running On: Shri, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 4, Host memory: 12622 MB
 #-----------------------------------------------------------
 source memory.tcl -notrace

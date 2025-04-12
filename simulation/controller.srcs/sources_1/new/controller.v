@@ -1,25 +1,3 @@
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 03/31/2025 07:14:07 PM
-// Design Name: 
-// Module Name: controller
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
-
 module controller(
     input clk, reset,
     input [7:0] instruction, accumulator,
@@ -55,16 +33,6 @@ module controller(
        
        else begin
         state  =  ns;
-        
-//        PC_en =  1'b0;
-//        A_en =  1'b0;
-//        wr_en =  1'b0;
-//        addr_mux =  1'b0;
-//        data_mux =  1'b0;
-//        PC_mux =  2'b00;
-//        alu_select =  3'b000;
-//        addr_select =  1'b0;     1'b0 --> 8bit. 1'b1 --> 4bit
-//        mem_select =  1'b0;      1'b0 --> data. 1'b1 --> ins
          ins_store = ins_store_en ?  instruction : ins_store;
     
         end

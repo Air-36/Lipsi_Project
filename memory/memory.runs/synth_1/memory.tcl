@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/shrin/Desktop/Vivado_projects/Lipsi_project/memory/memory.runs/synth_1/memory.tcl"
+  variable script "C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/memory/memory.runs/synth_1/memory.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,22 +70,23 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/shrin/Desktop/Vivado_projects/Lipsi_project/memory/memory.cache/wt [current_project]
-set_property parent.project_path C:/Users/shrin/Desktop/Vivado_projects/Lipsi_project/memory/memory.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/memory/memory.cache/wt [current_project]
+set_property parent.project_path C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/memory/memory.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.2 [current_project]
-set_property ip_output_repo c:/Users/shrin/Desktop/Vivado_projects/Lipsi_project/memory/memory.cache/ip [current_project]
+set_property ip_output_repo c:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/memory/memory.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib C:/Users/shrin/Desktop/Vivado_projects/Lipsi_project/memory/memory.srcs/sources_1/imports/Vivado_projects/memory.v
+read_verilog -library xil_defaultlib C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/memory/memory.srcs/sources_1/imports/Vivado_projects/memory.v
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -95,12 +96,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/shrin/Desktop/Vivado_projects/Lipsi_project/memory/memory.srcs/constrs_1/imports/Vivado_projects/Basys3_Master.xdc
-set_property used_in_implementation false [get_files C:/Users/shrin/Desktop/Vivado_projects/Lipsi_project/memory/memory.srcs/constrs_1/imports/Vivado_projects/Basys3_Master.xdc]
+read_xdc C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/memory/memory.srcs/constrs_1/imports/Vivado_projects/Basys3_Master.xdc
+set_property used_in_implementation false [get_files C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/memory/memory.srcs/constrs_1/imports/Vivado_projects/Basys3_Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/Users/shrin/Desktop/Vivado_projects/Lipsi_project/memory/memory.srcs/utils_1/imports/synth_1/memory.dcp
+read_checkpoint -auto_incremental -incremental C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/memory/memory.srcs/utils_1/imports/synth_1/memory.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
