@@ -7,7 +7,7 @@ output reg [7:0] PC_out
  
  always @(posedge clk, posedge reset) begin
   if (reset)
-   PC_out <= 8'b00000000;
+   PC_out <= 8'hff;
   else
    if(PC_en) PC_out <= mux_out;
  

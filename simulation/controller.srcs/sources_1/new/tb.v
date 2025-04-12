@@ -35,7 +35,7 @@ module tb(
     wr_en, PC_en, A_en, addr_mux, data_mux, addr_select, mem_select, ins_store_en,
     PC_mux, state, pin);
     
-    always #10 clk = ~clk;
+    always #100 clk = ~clk;
     initial begin
        clk = 0;
        reset = 1;

@@ -20,11 +20,11 @@ module lipsi_top2(
     
     PC program_counter(.clk(clk), .PC_en(PC_en), .mux_out(rd_addr), .PC_out(PC_out), .reset(reset));
     
-    addr_mux mux2(.rd_data(rd_data), .select(addr_mux), .mem_addr(wr_addr), .reset(reset));
+    addr_mux mux2(.rd_data(rd_data), .select(addr_mux), .mem_addr(wr_addr));
     
     counter adder(.PC_out(PC_out), .PC_mux(adder_out));
     
-    data_mux mux3(.A(accu_out), .PC(PC_out), .select(data_mux), .mem_data(wr_data), .reset(reset));
+    data_mux mux3(.A(accu_out), .PC(PC_out), .select(data_mux), .mem_data(wr_data));
     
     ALU alu(.enable(alu_select), .Op(rd_data), .rx2(accu_out), .rx(alu_out), .reset(reset));
     

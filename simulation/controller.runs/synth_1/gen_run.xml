@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1744438410" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/seven_seg_display.dcp">
-  <File Type="PA-TCL" Name="tb.tcl"/>
-  <File Type="REPORTS-TCL" Name="tb_reports.tcl"/>
-  <File Type="RDS-RDS" Name="tb.vds"/>
-  <File Type="RDS-UTIL" Name="tb_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="tb_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="tb.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1744449340" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/seven_seg_display.dcp">
+  <File Type="PA-TCL" Name="seven_segment.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="seven_segment_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="seven_segment_reports.tcl"/>
+  <File Type="RDS-RDS" Name="seven_segment.vds"/>
+  <File Type="RDS-UTIL" Name="seven_segment_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="seven_segment_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="seven_segment.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="seven_segment_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="seven_segment_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/ALU.v">
@@ -37,6 +40,20 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/addr_mux.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/clk_div_by_100K.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/clk_div_by_50M.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -78,30 +95,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/tb.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/clk_div_by_100K.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/clk_div_by_50M.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/seven_segment.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/tb.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -111,7 +112,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="tb"/>
+      <Option Name="TopModule" Val="seven_segment"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">

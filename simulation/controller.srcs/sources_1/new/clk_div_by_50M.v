@@ -2,7 +2,8 @@ module clk_div_by_50M(
  input wire clk_100M,  // input
     output reg clk_2Hz  // output
     );
-     reg [25:0] counter;
+    reg [25:0] counter;
+  // reg [3:0] counter;
    
    always @(posedge clk_100M) begin   
    

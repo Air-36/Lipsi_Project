@@ -10,37 +10,78 @@ module controller(
     output reg [7:0] ins_store
     );
    
-    reg [1:0] ns = 2'b00;
+    reg [1:0] ns;
    
  
     parameter A = 2'b00, B = 2'b01, C = 2'b10, D = 2'b11;
-    always @(posedge clk , posedge reset) begin
-       if (reset) begin
-        PC_en =  1'b1;
-        A_en =  1'b0;
-        wr_en =  1'b0;
-        addr_mux =  1'b0;
-        data_mux =  1'b0;
-        PC_mux =  2'b11;
-        alu_select =  3'b000;
-        addr_select =  1'b0;     // 1'b0 --> 8bit. 1'b1 --> 4bit
-        mem_select =  1'b1;
-        ins_store_en =  1'b1;
-        state =  2'b11;
-        ns = 2'b11;
-        pin = 2'b00;
-       end
+    always @(posedge clk) begin
+//       if (reset) begin
+////        PC_en <=  1'b1;
+////        A_en <=  1'b0;
+////        wr_en <=  1'b0;
+////        addr_mux <=  1'b0;
+////        data_mux <=  1'b0;
+////        PC_mux <=  2'b11;
+////        alu_select <=  3'b000;
+////        addr_select <=  1'b0;     // 1'b0 --> 8bit. 1'b1 --> 4bit
+////        mem_select <=  1'b1;
+//////        ins_store_en <=  1'b1;
+////        state <=  2'b11;
+////        ns <= 2'b11;
+////        pin <= 2'b00;
+//       end
        
-       else begin
+//       else begin
         state  =  ns;
+        
+//        PC_en =  1'b0;
+//        A_en =  1'b0;
+//        wr_en =  1'b0;
+//        addr_mux =  1'b0;
+//        data_mux =  1'b0;
+//        PC_mux =  2'b00;
+//        alu_select =  3'b000;
+//        addr_select =  1'b0;     1'b0 --> 8bit. 1'b1 --> 4bit
+//        mem_select =  1'b0;      1'b0 --> data. 1'b1 --> ins
          ins_store = ins_store_en ?  instruction : ins_store;
     
-        end
+//        end
     end
      
 //    assign ins_store = ins_tore_en ?  instruction : ins_store;
-    always @(instruction) begin
-        if (state == D) begin
+//    always @(instruction) begin
+//        if (state == D) begin
+//            PC_en =  1'b0;
+//            A_en =  1'b0;
+//            wr_en =  1'b0;
+//            addr_mux =  1'b0;
+//            data_mux =  1'b0;
+//            PC_mux =  2'b11;
+//            alu_select =  3'b0;
+//            ins_store_en =  1'b1;
+//            addr_select =  1'b0;
+//            mem_select =  1'b1;
+//            ns =  A;
+//        end
+//    end
+    
+    always @(ins_store, state, instruction) begin
+        if (reset) begin
+        PC_en <=  1'b1;
+        A_en <=  1'b0;
+        wr_en <=  1'b0;
+        addr_mux <=  1'b0;
+        data_mux <=  1'b0;
+        PC_mux <=  2'b11;
+        alu_select <=  3'b000;
+        addr_select <=  1'b0;     // 1'b0 --> 8bit. 1'b1 --> 4bit
+        mem_select <=  1'b1;
+        ins_store_en <=  1'b1;
+//        state <=  2'b11;
+        ns <= 2'b11;
+        pin <= 2'b00;
+       end
+        else if (state == D) begin
             PC_en =  1'b0;
             A_en =  1'b0;
             wr_en =  1'b0;
@@ -53,10 +94,7 @@ module controller(
             mem_select =  1'b1;
             ns =  A;
         end
-    end
-    
-    always @(ins_store, state) begin
-        if (ins_store[7] == 0) begin
+        else if (ins_store[7] == 0) begin
             case (state)
                 A: begin
                     PC_en =  1'b0;

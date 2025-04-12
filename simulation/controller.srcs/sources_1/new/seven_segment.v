@@ -4,7 +4,7 @@ module seven_segment(
     output reg [3:0] an
 );
 wire clk1k, clk2Hz;
-  wire [7:0] accu_out, x;
+  wire [7:0] accu_out, w;
   reg [3:0] digit;  // 4-bit input (hex digit)
   reg [1:0] count;
    initial begin
@@ -15,7 +15,7 @@ wire clk1k, clk2Hz;
 
    clk_div_by_100K k(.clk(clk),.clk_1k(clk1k));
    clk_div_by_50M h(.clk_100M(clk),.clk_2Hz(clk2Hz));
-   lipsi_top2 l(.clk(clk2Hz), .reset(reset), .accu_out(accu_out), .x(x));
+   lipsi_top2 l(.clk(clk2Hz), .reset(reset), .accu_out(accu_out), .w(w));
    
    
     always @(*) begin
@@ -54,12 +54,12 @@ wire clk1k, clk2Hz;
         end
         else if(count == 2'b10) begin
          an = 4'b1011;
-         digit = x[3:0];
+         digit = w[3:0];
          count = count+1;
         end 
         else if(count == 2'b11) begin
          an = 4'b0111;
-         digit = x[7:4];
+         digit = w[7:4];
          count = count+1;
         end
     end   
