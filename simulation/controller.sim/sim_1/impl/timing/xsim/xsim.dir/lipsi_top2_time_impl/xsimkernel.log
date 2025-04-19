@@ -1,0 +1,7 @@
+Running: xsim.dir/lipsi_top2_time_impl/xsimk.exe -simmode gui -wdb lipsi_top2_time_impl.wdb -simrunnum 0 -socket 61394
+Design successfully loaded
+Design Loading Memory Usage: 10240 KB (Peak: 10240 KB)
+Design Loading CPU Usage: 62 ms
+Simulation completed
+Simulation Memory Usage: 10968 KB (Peak: 10968 KB)
+Simulation CPU Usage: 124 ms

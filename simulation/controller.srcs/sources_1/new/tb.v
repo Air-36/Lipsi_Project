@@ -24,19 +24,21 @@ module tb(
 
     );
     reg clk, reset;
-     wire [7:0]rd_data, rd_addr, wr_addr, wr_data, alu_out,  adder_out, PC_out, accu_out, v, w, x, y, z, ins_store;
-    wire [2:0]alu_select;
+     wire [7:0] accu_out, v, w, x, y, z;
+     reg [15:0] sw;
+     wire [7:0]rd_data, rd_addr, wr_addr, wr_data, alu_out,  adder_out, PC_out, ins_store, c2;
+    wire [3:0] alu_select;
     wire wr_en, PC_en, A_en, addr_mux, data_mux, addr_select, mem_select, ins_store_en;
     wire [1:0] PC_mux, state, pin;
+    wire [15:0] led;
     
-    lipsi_top2 dut (clk, reset,
-     rd_data, rd_addr, wr_addr, wr_data, alu_out,  adder_out, PC_out, accu_out, v, w, x, y, z, ins_store,
-    alu_select,
-    wr_en, PC_en, A_en, addr_mux, data_mux, addr_select, mem_select, ins_store_en,
-    PC_mux, state, pin);
+    lipsi_top2 dut (clk, reset, sw, accu_out, v, w, x, y, z, rd_data, rd_addr, wr_addr, wr_data, alu_out,  adder_out, PC_out, ins_store,
+                    alu_select, wr_en, PC_en, A_en, addr_mux, data_mux, addr_select, mem_select, ins_store_en, c2,
+                    PC_mux, state, pin, led);
     
-    always #100 clk = ~clk;
+    always #10 clk = ~clk;
     initial begin
+       sw = 16'b0000000000000100;
        clk = 0;
        reset = 1;
        #23

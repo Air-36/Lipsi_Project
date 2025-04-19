@@ -1,6 +1,6 @@
 module addr_mux(
  input [7:0] rd_data,
- input select, reset,
+ input select, 
  output [7:0] mem_addr
     );
     
