@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sun Apr 20 21:22:59 2025
+# Process ID: 8692
+# Current directory: C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/Lipsi_final_model
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1700 C:\Users\shrin\Desktop\Vivado_projects\Lipsi_Project\Lipsi_final_model\controller.xpr
+# Log file: C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/Lipsi_final_model/vivado.log
+# Journal file: C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/Lipsi_final_model\vivado.jou
+# Running On: Shri, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 4, Host memory: 12622 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/Lipsi_final_model/controller.xpr
+update_compile_order -fileset sources_1
+close [ open C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/Lipsi_final_model/controller.srcs/sources_1/new/clk_div_by_5M.v w ]
+add_files C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/Lipsi_final_model/controller.srcs/sources_1/new/clk_div_by_5M.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/Lipsi_final_model/controller.srcs/sources_1/new/clk_div_by_50M.v] -no_script -reset -force -quiet
+remove_files  C:/Users/shrin/Desktop/Vivado_projects/Lipsi_Project/Lipsi_final_model/controller.srcs/sources_1/new/clk_div_by_50M.v
