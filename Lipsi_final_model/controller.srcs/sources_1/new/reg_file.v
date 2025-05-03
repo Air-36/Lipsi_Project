@@ -20,37 +20,23 @@ module memory(
       
     always @(posedge clk100m, posedge reset) begin
        if (reset) begin
-       //instruction to count number on ones in a given 16 bit input from switches
-            data_mem[256] <= 8'hf8;             
-            data_mem[257] <= 8'h01;           
-            data_mem[258] <= 8'hf9;
-            data_mem[259] <= 8'h02;
-            data_mem[260] <= 8'hc7;
-            data_mem[261] <= 8'h00;
-            data_mem[262] <= 8'h83;
-            data_mem[263] <= 8'h71;
-            data_mem[264] <= 8'hc4;
-            data_mem[265] <= 8'h01;
-            data_mem[266] <= 8'h03;
-            data_mem[267] <= 8'h83;
-            data_mem[268] <= 8'h71;
-            data_mem[269] <= 8'he8;
-            data_mem[270] <= 8'h81;
-            data_mem[271] <= 8'hd3;
-            data_mem[272] <= 8'h07;
-            data_mem[273] <= 8'h72;
-            data_mem[274] <= 8'hc4;
-            data_mem[275] <= 8'h01;
-            data_mem[276] <= 8'h03;
-            data_mem[277] <= 8'h83;
-            data_mem[278] <= 8'h72;
-            data_mem[279] <= 8'he8;
-            data_mem[280] <= 8'h82;
-            data_mem[281] <= 8'hd3;
-            data_mem[282] <= 8'h11;
-            data_mem[283] <= 8'h73;
-            data_mem[284] <= 8'hf0;
-            data_mem[285] <= 8'hff;
+       //sum of first n numbers with controlled input output
+            data_mem[256] <= 8'b11111000;
+            data_mem[257] <= 8'b00000001;
+            data_mem[258] <= 8'b01110001;
+            data_mem[259] <= 8'b10000010;
+            data_mem[260] <= 8'b11000001;
+            data_mem[261] <= 8'b00000001;
+            data_mem[262] <= 8'b10000001;
+            data_mem[263] <= 8'b00000010;
+            data_mem[264] <= 8'b10000010;
+            data_mem[265] <= 8'b01110001;
+            data_mem[266] <= 8'b11010011;
+            data_mem[267] <= 8'b00000100;
+            data_mem[268] <= 8'b01110010;
+            data_mem[269] <= 8'b11110000;           
+            data_mem[270] <= 8'b11111111;
+            
         
          for (i = 0; i < 256; i = i + 1) begin
                 data_mem[i] <= 0;

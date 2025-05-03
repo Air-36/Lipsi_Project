@@ -1,27 +1,28 @@
 module seven_segment(
-    input clk, reset,
-    input [15:0] sw,
+    input clk, reset, str_stp,
     output reg [6:0] seg, // Active-low 7-segment output
     output reg [3:0] an,
-    output [15:0] led
+    output clk1k,
+    output [5:0] led
 );
-wire clk1k, clk20Hz;
-  wire [7:0] accu_out, mem2;
-  reg [3:0] digit;  // 4-bit input (hex digit)
-  reg [1:0] count;
+wire clk_1Hz;
+  wire [5:0] Q;
+  reg [5:0] digit;  
+  reg count;
    initial begin
-     digit[3:0] = 4'b0000;
+     digit[5:0] = 6'b000000;
      an = 4'b1110;
-     count = 2'b00;
+     count = 1'b0;
      end 
 
    clk_div_by_100K k(.clk(clk),.clk_1k(clk1k));
-   clk_div_by_5M h(.clk_100M(clk),.clk_20Hz(clk20Hz));
-   lipsi_top2 l(.clk(clk20Hz), .reset(reset), .accu_out(accu_out), .mem2(mem2), .led(led), .sw(sw));
-   
-   
+   mod60_counter m(.clk(clk_1Hz),.reset(reset),.str_stp(str_stp),.Q(Q));
+   clk_div_100m_to_1Hz c(.clk_100M(clk),.clk_1Hz(clk_1Hz));
+     
+     assign led = Q;
+     
     always @(*) begin
-        case (digit)          // display on Seven Segment
+        case (digit[3:0])          // display on Seven Segment
             4'h0: seg = 7'b1000000; // 0
             4'h1: seg = 7'b1111001; // 1
             4'h2: seg = 7'b0100100; // 2
@@ -43,26 +44,38 @@ wire clk1k, clk20Hz;
     end
     
      always @(posedge clk1k)
-     begin                           // conversion of data on accumulator and one of the 
-        if(count == 2'b00) begin     // memory element to hexadecimal display on Seven segment
-         an = 4'b1110;
-         digit = accu_out[3:0];
-         count = count+1;
+     begin                            
+        if(count == 1'b0) begin     
+             an = 4'b1110;
+                 if( Q < 6'd10)
+                 digit = Q;
+                 else if ((Q > 6'd9) & (Q < 6'd20))
+                 digit = Q - 6'd10;
+                 else if ((Q > 6'd19) & (Q < 6'd30))
+                 digit = Q - 6'd20;
+                 else if ((Q > 6'd29) & (Q < 6'd40))
+                 digit = Q - 6'd30;
+                 else if ((Q > 6'd39) & (Q < 6'd50))
+                 digit = Q - 6'd40;
+                 else if ((Q > 6'd49) & (Q < 6'd60))
+                 digit = Q - 6'd50;
+             count = ~count;
         end
-        else if(count == 2'b01) begin
-         an = 4'b1101;
-         digit = accu_out[7:4];
-         count = count+1;
-        end
-        else if(count == 2'b10) begin
-         an = 4'b1011;
-         digit = mem2[3:0];
-         count = count+1;
-        end 
-        else if(count == 2'b11) begin
-         an = 4'b0111;
-         digit = mem2[7:4];
-         count = count+1;
+        else if(count == 1'b1) begin
+             an = 4'b1101;
+                 if( Q < 6'd10)
+                 digit = 0;
+                 else if ( Q >= 6'd10 & Q < 6'd20)
+                 digit = 6'd1;
+                 else if ( Q >= 6'd20 & Q < 6'd30)
+                 digit = 6'd2;
+                 else if ( Q >= 6'd30 & Q < 6'd40)
+                 digit = 6'd3;
+                 else if ( Q >= 6'd40 & Q < 6'd50)
+                 digit = 6'd4;
+                 else if ( Q >= 6'd50 & Q < 6'd60)
+                 digit = 6'd5;
+             count = ~count;
         end
     end   
        
