@@ -1,5 +1,5 @@
 # Lipsi - A Processor Design
-Lipsi is a custom-designed processor project implemented using Verilog HDL. The design was developed and tested using AMD's Vivado 2023.2 and deployed on a Basys 3 FPGA development board. This project demonstrates core concepts of processor architecture, digital design, and FPGA-based implementation.
+Lipsi is a custom-designed processor project implemented using Verilog HDL. The design was developed and tested using AMD's Vivado 2024.2 and deployed on a Basys 3 FPGA development board. This project demonstrates core concepts of processor architecture, digital design, and FPGA-based implementation.
 
 ## Table of Contents
 - [Overview](#overview)   
